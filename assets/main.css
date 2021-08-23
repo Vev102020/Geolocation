@@ -20,8 +20,7 @@ select { cursor: pointer; -webkit-appearance: menulist; }
 .fancybox-bg { background: #1e1e1e; opacity: 0; transition-duration: inherit; transition-property: opacity; transition-timing-function: cubic-bezier(.47,0,.74,.71); }
 .fancybox-is-open .fancybox-bg { opacity: .7; transition-timing-function: cubic-bezier(.22,.61,.36,1); }
 .fancybox-bg, .fancybox-inner, .fancybox-outer, .fancybox-stage { bottom: 0; left: 0; position: absolute; right: 0; top: 0; }
-header {-webkit-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2); -moz-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);border-radius: 5px; background: #9d00ff; padding: 20px 0; color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%; max-width: 500px;}
+header {-webkit-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2); -moz-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2); box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);border-radius: 5px; background: #9d00ff; padding: 20px 0; color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%; max-width: 500px;}
 .header{display: flex;justify-content: space-between;align-items: center;}
 
 /*Гео определение города*/

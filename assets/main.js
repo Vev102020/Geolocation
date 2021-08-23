@@ -5,6 +5,7 @@ $(function(){
         cityDefinition ();
         location.reload();
     })
+    
     //Определение города и запись в куки
     function  cityDefinition (){
         if ($.cookie('NameCity') == undefined || $.cookie('NameCity') == null )
