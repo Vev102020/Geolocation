@@ -1,0 +1,61 @@
+* {margin: 0;padding: 0;}
+body{background: #ffffff; color: #000000;margin: 0;}
+.container{margin-left: 20px;margin-right: 20px;}
+
+input, select, textarea{display: block; width: 100%; height: 50px; line-height: 48px; padding: 0 1.5rem; background-color: #ffffff; border-width: 1px; border-style: solid; border-color: #dddddd; border-radius: 5px; outline: 0; font-size: 1rem; font-weight: 300; font-family: 'Nunito', sans-serif; text-transform: none; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+select { cursor: pointer; -webkit-appearance: menulist; }
+
+.fancybox-button { background: rgba(30,30,30,.6); border: 0; border-radius: 0; box-shadow: none; cursor: pointer; display: inline-block; height: 44px; margin: 0; padding: 10px; position: relative; transition: color .2s; vertical-align: top; visibility: inherit; width: 44px; }
+.fancybox-close-small { background: transparent; border: 0; border-radius: 0; color: #ccc; cursor: pointer; opacity: .8; padding: 8px; position: absolute; right: -12px; top: -44px; z-index: 401; }
+.fancybox-slide--html .fancybox-close-small { padding: 10px; right: 0; top: 0; }
+.fancybox-container * { box-sizing: border-box; }
+.fancybox-infobar, .fancybox-toolbar, .fancybox-navigation { display: none; }
+.button{display: inline-block; position: relative; padding: 0 2.25rem; line-height: 45px; color: #ffffff; background: #9d00ff; font-size: 1rem; font-weight: 400; font-family: 'Jost', sans-serif; text-transform: none; border-width: 0; border-style: solid; border-color: transparent; border-radius: 5px; box-shadow: none; overflow: visible; text-align: center; margin: 0; outline: 0; cursor: pointer; white-space: nowrap; text-shadow: none; backface-visibility: hidden; transform: translateZ(0); -webkit-appearance: none; -moz-appearance: none; appearance: none; transition: all 0.3s ease;}
+.button:hover, .button.active{ color: #ffffff; background: #202020; box-shadow: none; }
+
+/*** Скрол всего сайта ***/
+::-webkit-scrollbar {width: 1rem;height: 0;}
+::-webkit-scrollbar-thumb {border-radius: 0;background-color: #9d00ff;}
+::-webkit-scrollbar-track {border-radius: 0;background-color: #dddddd;}
+.fancybox-bg { background: #1e1e1e; opacity: 0; transition-duration: inherit; transition-property: opacity; transition-timing-function: cubic-bezier(.47,0,.74,.71); }
+.fancybox-is-open .fancybox-bg { opacity: .7; transition-timing-function: cubic-bezier(.22,.61,.36,1); }
+.fancybox-bg, .fancybox-inner, .fancybox-outer, .fancybox-stage { bottom: 0; left: 0; position: absolute; right: 0; top: 0; }
+header {-webkit-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2); -moz-box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);border-radius: 5px; background: #9d00ff; padding: 20px 0; color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%; max-width: 500px;}
+.header{display: flex;justify-content: space-between;align-items: center;}
+
+/*Гео определение города*/
+header .locator{ display: block; margin-right: 16px; -webkit-mask-image:  url(/assets/icon/locator.svg); -webkit-mask-size: contain; background-color: #ffffff; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat; width: 16px; height: 16px;}
+#geoAreas .geo_block:hover .locator{background: #e5e4e6;}
+.SearchBlockContainer {padding: 20px 40px 20px 20px;background: #ffffff;border: 1px solid #dddddd;border-radius: 5px;border-bottom: 1px solid #dddddd;padding-bottom: 20px;position: absolute;top: 50%;transform: translate(-50%, -50%);left: 50%;}
+.SearchBlockContainer .SearchBlockUP {display: flex;align-items: center;margin-bottom: 20px;}
+.SearchBlockUP .saveCity{padding: 0 20px;margin-left: 20px;}
+#SearchCityBlock{display: flex;}
+#SearchCityBlock .searchTitle {font-size: 20px; font-weight: 600;cursor: default;margin-bottom: 10px; display: block;}
+#SearchCityBlock .left{margin-right: 20px;}
+#SearchCityBlock #region ul, #SearchCityBlock #city ul {padding-left: 20px;height: 340px;overflow-y: overlay;}
+#SearchCityBlock #region ul li:hover, #region ul li.active, #SearchCityBlock #city ul li:hover, #city ul li.active {color: #9d00ff;list-style-type: disclosure-closed !important;}
+#SearchCityBlock #region ul li, #SearchCityBlock #city ul li {width: 250px;white-space: normal;cursor: pointer;line-height: 30px;font-size: 18px;list-style-type: none;}
+.NameCityBlock, #SearchCityBlock .searchTitle, .SearchBlockContainer .SearchBlockUP {margin-left: 20px;}
+.NameCityBlock{margin-bottom: 20px;font-size: 20px;cursor: default;font-weight: 600;}
+#geoAreas .geo_block {display:  flex;align-items: center;}
+#del_cookie{cursor: pointer;}
+#del_cookie:hover{color: #e5e4e6;}
+
+#geoAreas .geo_block span:first-child{cursor: default;}
+#geoAreas .nameCity {color: #ffffff;cursor: pointer;}
+#geoAreas .geo_block:hover .nameCity{color: #e5e4e6;}
+
+@media all and (max-width: 480px) {
+  .SearchBlockContainer{width: 90%;}
+  #SearchCityBlock #region ul li, #SearchCityBlock #city ul li{width: auto;margin-right: 15px;}
+  #SearchCityBlock{flex-direction: column;}
+  #SearchCityBlock #region ul, #SearchCityBlock #city ul{height: 150px;}
+  #SearchCityBlock .left{margin-right:0;margin-bottom: 20px;}
+  .SearchBlockContainer .SearchBlockUP{flex-direction: column;}
+  .SearchBlockUP .saveCity{margin-left: 0;margin-top: 10px;}
+}
+@media all and (max-width: 380px) {
+    div#geoAreas { margin-bottom: 20px; }
+    .header{flex-direction: column;}
+}
