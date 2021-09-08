@@ -39,7 +39,7 @@ $(function () {
   let cookieRegionVal;
 
   //JSON ГОРОДА
-  $.getJSON("/assets/areas.json", function (data) {
+  $.getJSON("./assets/areas.json", function (data) {
     //Генерация городов в поисковике
     let arrayCity = [];
 
