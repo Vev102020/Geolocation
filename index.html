@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--ГЕО-->
-    <link rel="stylesheet" href="/assets/main.css" />
-    <link rel="stylesheet" href="/assets/chosen.min.css" />
+    <link rel="stylesheet" href="../assets/main.css" />
+    <link rel="stylesheet" href="../assets/chosen.min.css" />
 
-    <script type="text/javascript" src="/assets/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="/assets/forall.js"></script>
-    <script type="text/javascript" src="/assets/jquery.cookie.js"></script>
-    <script type="text/javascript" src="/assets/chosen.jquery.min2.js"></script>
+    <script type="text/javascript" src="../assets/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../assets/forall.js"></script>
+    <script type="text/javascript" src="../assets/jquery.cookie.js"></script>
+    <script
+      type="text/javascript"
+      src="../assets/chosen.jquery.min2.js"
+    ></script>
     <title>Geo</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container header">   
-            <!--Гео. Определение города-->
-            <div id="geoAreas">
-                <div class="geo_block"><span class="locator"></span><span id="nameCity" class="nameCity" data-fancybox=""  data-src="#fancybox-city" >Не определен</span></div>
-                <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-                <script>
-                    $(function(){
-                        $(".nameCity").fancybox({
-                            'hideOnContentClick': true,
-                            'title': false,
-                            padding: 0,
-                            maxWidth: 1000,
-                            autoHeight: true,
-                            touch:false,
-                        })
-                    });
-                </script>
-            </div>
-            <!-- Конец Гео. Определение города-->
-            <span id="del_cookie">Сбросить cookie</span>
-        </div>  
+      <div class="container header">
+        <!--Гео. Определение города-->
+        <div id="geoAreas">
+          <div class="geo_block">
+            <span class="locator"></span
+            ><span
+              id="nameCity"
+              class="nameCity"
+              data-fancybox=""
+              data-src="#fancybox-city"
+              >Не определен</span
+            >
+          </div>
+          <script
+            src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"
+            type="text/javascript"
+          ></script>
+          <script>
+            $(function () {
+              $(".nameCity").fancybox({
+                hideOnContentClick: true,
+                title: false,
+                padding: 0,
+                maxWidth: 1000,
+                autoHeight: true,
+                touch: false,
+              });
+            });
+          </script>
+        </div>
+        <!-- Конец Гео. Определение города-->
+        <span id="del_cookie">Сбросить cookie</span>
+      </div>
     </header>
-    <div id="fancybox-city" style="display:none" class="modal SearchBlockContainer" >
-        <div class="NameCityBlock"><span>Выберите город</span></div>
-        <div class="SearchBlockUP">
-            <select  id="select_city" class="js-select2" name="city" placeholder="Найдите свой город">
-                <option value="" style="display:none"></option>
-            </select>
-            <button class="saveCity button" onclick="$.fancybox.close();">Сохранить</button>
+    <div
+      id="fancybox-city"
+      style="display: none"
+      class="modal SearchBlockContainer"
+    >
+      <div class="NameCityBlock"><span>Выберите город</span></div>
+      <div class="SearchBlockUP">
+        <select
+          id="select_city"
+          class="js-select2"
+          name="city"
+          placeholder="Найдите свой город"
+        >
+          <option value="" style="display: none"></option>
+        </select>
+        <button class="saveCity button" onclick="$.fancybox.close();">
+          Сохранить
+        </button>
+      </div>
+      <div id="SearchCityBlock">
+        <div class="left">
+          <span class="searchTitle">Область</span>
+          <div id="region"></div>
         </div>
-        <div id="SearchCityBlock" >
-            <div class="left">
-                <span class="searchTitle">Область</span>
-                <div id="region"></div>
-            </div>
-            <div class="right">
-                <span class="searchTitle">Город</span>
-                <div id="city"></div>
-            </div>
+        <div class="right">
+          <span class="searchTitle">Город</span>
+          <div id="city"></div>
         </div>
+      </div>
     </div>
 
-    
-<script type="text/javascript" src="/assets/main.js"></script>
-</body>
+    <script type="text/javascript" src="../assets/main.js"></script>
+  </body>
 </html>
