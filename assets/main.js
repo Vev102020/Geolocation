@@ -70,7 +70,7 @@ $(function () {
         '<option value="' + this.value + '">' + this.name + "</option>"
       );
     });
-    console.log(cookieRegionVal);
+
     //Запись значения начального поисковик
     $(".js-select2").chosen($("#select_city").val(cookieCityVal));
 
